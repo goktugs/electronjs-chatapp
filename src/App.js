@@ -5,6 +5,7 @@ import Navbar from './components/Navbar';
 import LoginView from './views/Login';
 import SettingsView from './views/Settings';
 import RegisterView from './views/Register';
+import ChatView from './views/Chat';
 const App = () => {
   return (
     <Router>
@@ -19,6 +20,10 @@ const App = () => {
           </Route>
           <Route path="/register">
             <RegisterView />
+          </Route>
+
+          <Route path="/chat">
+            <ChatView />
           </Route>
           <Route path="/" exact>
             <HomeView />
