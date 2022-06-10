@@ -12,6 +12,9 @@ const App = () => {
       <Navbar />
       <div className="content-wrapper">
         <Switch>
+          <Route path="/" exact>
+            <HomeView />
+          </Route>
           <Route path="/settings">
             <SettingsView />
           </Route>
@@ -22,11 +25,8 @@ const App = () => {
             <RegisterView />
           </Route>
 
-          <Route path="/chat">
+          <Route path="/chat/:slug">
             <ChatView />
-          </Route>
-          <Route path="/" exact>
-            <HomeView />
           </Route>
         </Switch>
       </div>
